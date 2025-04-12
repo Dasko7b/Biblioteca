@@ -63,13 +63,8 @@ void listarTodosLivros(Biblioteca* b) {
     int i;
     for (i = 0; i < b->totalLivros; i++) {
         Livro l = b->livros[i];
-        printf("Titulo: %s\nAutor: %s\nAno: %d\nISBN: %s\nStatus: %s\n",
-            l.titulo, l.autor, l.ano, l.isbn, l.status == DISPONIVEL ? "Disponivel" : "Emprestado");
-
-        if (l.status == EMPRESTADO) {
-            printf("Emprestado para: %s em %s\n", l.usuario, l.dataEmprestimo);
-        }
-        printf("-----------------------------\n");
+        printf("Titulo: %s\nAutor: %s\nAno: %d\nISBN: %s\nStatus: %s\n", l.titulo, l.autor, l.ano, l.isbn, l.status == DISPONIVEL ? "Disponivel" : "Emprestado");
+		printf("\n");
     }
 }
 

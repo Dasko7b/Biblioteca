@@ -40,21 +40,21 @@ void listarTodosLivros(Biblioteca* b) {
     NoLivro* atual = b->primeiro;
 
     while (atual != NULL) {
-        printf("Titulo: %s\n", atual->livro.titulo);
-        printf("Autor: %s\n", atual->livro.autor);
-        printf("Ano: %d\n", atual->livro.ano);
-        printf("ISBN: %s\n", atual->livro.isbn);
-        printf("Status: %s\n", atual->livro.status == DISPONIVEL ? "Disponivel" : "Emprestado");
+        printf("%s - %s - %d - %s\n", 
+               atual->livro.titulo, 
+               atual->livro.autor, 
+               atual->livro.ano, 
+               atual->livro.isbn);
 
-        if (atual->livro.status == EMPRESTADO) {
-            printf("Emprestado para: %s\n", atual->livro.usuario);
-            printf("Data do emprestimo: %s\n", atual->livro.dataEmprestimo);
-        }
-        printf("---------------------------\n");
+        printf("Status: %s\n", 
+               atual->livro.status == DISPONIVEL ? "Disponivel" : "Emprestado");
+		printf("\n");
+
 
         atual = atual->proximo;
     }
 }
+
 
 int emprestarLivro(Biblioteca* b, char* isbn, char* usuario, char* data) {
     NoLivro* atual = b->primeiro;

@@ -60,7 +60,6 @@ void inicializarBiblioteca(Biblioteca* b);
 void destruirBiblioteca(Biblioteca* b);
 
 int cadastrarLivro(Biblioteca* b, char* titulo, char* autor, int ano, char* isbn);
-
 void listarTodosLivros(Biblioteca* b);
 
 int emprestarLivro(Biblioteca* b, char* isbn, char* usuario, char* data);

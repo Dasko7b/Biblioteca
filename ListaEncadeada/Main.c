@@ -10,16 +10,17 @@ Biblioteca b;
 inicializarBiblioteca(&b);
 
 
-cadastrarLivro(&b, "Capitães da Areia", "Jorge Amado", 1937, "3333333333333");
+cadastrarLivro(&b, "Capitaes da Areia", "Jorge Amado", 1937, "3333333333333");
 
 cadastrarLivro(&b, "Dom Casmurro", "Machado de Assis", 1899, "4444444444444");
 
-
+printf("lista dos livros apos o cadastro:\n");
 listarTodosLivros(&b);
 
 
-emprestarLivro(&b, "3333333333333", "João", "04/04/2025");
-
+emprestarLivro(&b, "3333333333333", "Joao", "04/04/2025");
+printf("\n");
+printf("lista dos livros apos o emprestimo:\n");
 listarTodosLivros(&b);
 
 
